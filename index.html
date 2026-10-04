@@ -3,49 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViralVids | Web3 Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Younes Boukhlif | الصفحة الشخصية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --primary-accent: #58a6ff;
+            --secondary-accent: #238636;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-accent);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: block;
+            text-align: center;
+            background: var(--secondary-accent);
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .social-btn:hover {
+            opacity: 0.9;
+        }
+
+        .social-btn.github {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- قسم رأس الصفحة والملف الشخصي -->
-        <header class="profile-header">
-            <div class="avatar">🎬</div>
-            <h1>viralvids.crypto</h1>
-            <p class="bio">المحتوى الأقوى والفيديوهات الأكثر انتشاراً على الـ Web3</p>
-            <div class="badge">Decentralized Identity</div>
+        <!-- قسم التعريف المباشر -->
+        <header>
+            <h1>يونس بوعخليف</h1>
+            <p>مطور وأنظمة لنيوكس | المهتمين بالويب والتطبيقات</p>
         </header>
 
-        <!-- قسم الروابط الرئيسية -->
-        <main class="links-container">
-            <a href="https://youtube.com" target="_blank" class="link-card youtube">
-                <span>قناة اليوتيوب</span>
-            </a>
-
-            <a href="https://tiktok.com" target="_blank" class="link-card tiktok">
-                <span>حساب التيك توك</span>
-            </a>
-
-            <a href="https://t.me" target="_blank" class="link-card telegram">
-                <span>مجتمع التليجرام</span>
-            </a>
-
-            <a href="https://x.com" target="_blank" class="link-card twitter">
-                <span>منصة X (تويتر)</span>
-            </a>
-        </main>
-
-        <!-- قسم محفظة الدعم والتحويلات -->
-        <section class="wallet-section">
-            <h3>عنوان استقبال الدعم والتحويلات المباشر:</h3>
-            <div class="wallet-box">
-                <code id="wallet-address">0x8a835759ebbabb5e2d075946a31528d701bb4090</code>
+        <!-- الشبكة الرئيسية -->
+        <div class="grid">
+            <!-- قسم عني -->
+            <div class="card">
+                <h2>حول شخصي</h2>
+                <p>مرحباً بك في موقعي الشخصي الرسمية. مهتم بعلوم الحاسوب، البرمجة، وأنظمة التشغيل اللامركزية والويب 3.</p>
             </div>
-        </section>
+
+            <!-- قسم المهارات -->
+            <div class="card">
+                <h2>المهارات التقنية</h2>
+                <ul class="skills-list">
+                    <li>Linux / Bash</li>
+                    <li>HTML5 / CSS3</li>
+                    <li>Git / GitHub</li>
+                    <li>Web3 Domains</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- قسم التشييد والتواصل -->
+        <div class="grid">
+            <div class="card">
+                <h2>المشاريع</h2>
+                <p>• <strong>الموقع الشخصي:</strong> مستضاف عبر GitHub Pages ومرتبط بـ Unstoppable Domains.</p>
+            </div>
+
+            <div class="card">
+                <h2>روابط التواصل</h2>
+                <div class="social-links">
+                    <a href="https://github.com/lledlinux" target="_blank" class="social-btn github">حساب GitHub</a>
+                </div>
+            </div>
+        </div>
 
         <footer>
-            <p>مستضاف بشكل لامركزي على شبكة IPFS &copy; 2026</p>
+            <p>جميع الحقوق محفوظة © 2026 — boukhlifyounes.pw</p>
         </footer>
     </div>
+
 </body>
 </html>
